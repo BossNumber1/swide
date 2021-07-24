@@ -1,6 +1,7 @@
 import Head from "next/head";
 import React from "react";
 import Swiper from "swiper";
+import Image from "next/image";
 
 export default function Home() {
     React.useEffect(() => {
@@ -36,23 +37,48 @@ export default function Home() {
                     <div className="swiper-wrapper">
                         <div className="swiper-slide">
                             {/* <div> */}
-                            <img src="https://clck.ru/WNUCT" />
+                            <Image
+                                src="/one.jpg"
+                                alt="pic1"
+                                width="300px"
+                                height="150px"
+                            />
                         </div>
                         <div className="swiper-slide">
                             {/* <div> */}
-                            <img src="https://clck.ru/WNUH2" />
+                            <Image
+                                src="/two.jpg"
+                                alt="pic2"
+                                width="300px"
+                                height="150px"
+                            />
                         </div>
                         <div className="swiper-slide">
                             {/* <div> */}
-                            <img src="https://clck.ru/WNUJP" />
+                            <Image
+                                src="/ae.jpg"
+                                alt="pic3"
+                                width="300px"
+                                height="150px"
+                            />
                         </div>
                         <div className="swiper-slide">
                             {/* <div> */}
-                            <img src="https://clck.ru/WNUKN" />
+                            <Image
+                                src="/222.jpeg"
+                                alt="pic4"
+                                width="300px"
+                                height="150px"
+                            />
                         </div>
                         <div className="swiper-slide">
                             {/* <div> */}
-                            <img src="https://clck.ru/WNUMS" />
+                            <Image
+                                src="/ava.jpg"
+                                alt="pic4"
+                                width="300px"
+                                height="150px"
+                            />
                         </div>
                     </div>
                     {/* Add Pagination */}
