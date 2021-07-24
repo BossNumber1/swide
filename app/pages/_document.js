@@ -10,11 +10,14 @@ export default class MyDocument extends Document {
         return (
             <Html lang="ru">
                 <Head>
-                    {/* <link
+                    <link
                         rel="stylesheet"
-                        href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css"
-                    /> */}
-                    {/* <link rel="icon" href="/iconBookmen.ico" /> */}
+                        href="https://unpkg.com/swiper/swiper-bundle.css"
+                    />
+                    <link
+                        rel="stylesheet"
+                        href="https://unpkg.com/swiper/swiper-bundle.min.css"
+                    />
                 </Head>
                 <body>
                     <Main />
