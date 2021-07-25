@@ -6,15 +6,8 @@ import Image from "next/image";
 export default function Home() {
     React.useEffect(() => {
         var swiper = new Swiper(".swiper-container", {
-            spaceBetween: 30,
-            effect: "fade",
             pagination: {
                 el: ".swiper-pagination",
-                clickable: true,
-            },
-            navigation: {
-                nextEl: ".swiper-button-next",
-                prevEl: ".swiper-button-prev",
             },
         });
     }, []);
@@ -32,11 +25,9 @@ export default function Home() {
             </Head>
 
             <main>
-                {/* Swiper */}
                 <div className="swiper-container">
                     <div className="swiper-wrapper">
                         <div className="swiper-slide">
-                            {/* <div> */}
                             <Image
                                 src="/one.jpg"
                                 alt="pic1"
@@ -45,7 +36,6 @@ export default function Home() {
                             />
                         </div>
                         <div className="swiper-slide">
-                            {/* <div> */}
                             <Image
                                 src="/two.jpg"
                                 alt="pic2"
@@ -54,7 +44,6 @@ export default function Home() {
                             />
                         </div>
                         <div className="swiper-slide">
-                            {/* <div> */}
                             <Image
                                 src="/ae.jpg"
                                 alt="pic3"
@@ -63,7 +52,6 @@ export default function Home() {
                             />
                         </div>
                         <div className="swiper-slide">
-                            {/* <div> */}
                             <Image
                                 src="/222.jpeg"
                                 alt="pic4"
@@ -72,7 +60,6 @@ export default function Home() {
                             />
                         </div>
                         <div className="swiper-slide">
-                            {/* <div> */}
                             <Image
                                 src="/ava.jpg"
                                 alt="pic4"
@@ -81,11 +68,7 @@ export default function Home() {
                             />
                         </div>
                     </div>
-                    {/* Add Pagination */}
-                    <div className="swiper-pagination swiper-pagination-white"></div>
-                    {/* Add Arrows */}
-                    <div className="swiper-button-next swiper-button-white"></div>
-                    <div className="swiper-button-prev swiper-button-white"></div>
+                    <div className="swiper-pagination swiper-pagination-white" />
                 </div>
             </main>
         </>
