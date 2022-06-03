@@ -5,12 +5,24 @@ import Image from "next/image";
 
 export default function Home() {
     React.useEffect(() => {
-        var swiper = new Swiper(".swiper-container", {
+        let swiper = new Swiper(".swiper-container", {
             pagination: {
                 el: ".swiper-pagination",
             },
         });
-    }, []);
+
+        let startMoveEvent;
+
+        swiper.on("touchStart", (event) => {
+            startMoveEvent = event;
+        });
+
+        swiper.on("touchEnd", (event) => {
+            let sliderMovedToLeft = event.offsetX - startMoveEvent.offsetX < 0;
+
+            if (sliderMovedToLeft == false) alert("ураааа!!! мы победииили!");
+        });
+    });
 
     return (
         <>
@@ -27,7 +39,7 @@ export default function Home() {
             <main>
                 <div className="swiper-container">
                     <div className="swiper-wrapper">
-                        <div className="swiper-slide">
+                        <div className="swiper-slide" id="brow">
                             <Image
                                 src="/one.jpg"
                                 alt="pic1"
